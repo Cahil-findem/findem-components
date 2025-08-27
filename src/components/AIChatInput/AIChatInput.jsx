@@ -1,25 +1,29 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import Button from '../Button/Button';
 import './AIChatInput.css';
 
 const AIChatInput = ({ 
   placeholder = "Describe who you are looking for",
   onSubmit,
-  isLoading = false,
+  showThinking = false,
+  onToggleThinking,
   disabled = false,
-  showLeftActions = true,
-  showVoiceButton = true,
   ...props 
 }) => {
-  const [message, setMessage] = useState('');
-  const inputRef = useRef(null);
+  const [inputValue, setInputValue] = useState('');
+  const [focused, setFocused] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (message.trim() && !isLoading && !disabled) {
-      onSubmit?.(message.trim());
-      setMessage('');
+    if (inputValue.trim() && !disabled) {
+      onSubmit?.(inputValue.trim());
+      setInputValue('');
     }
+  };
+
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
   };
 
   const handleKeyPress = (e) => {
@@ -29,83 +33,73 @@ const AIChatInput = ({
     }
   };
 
-  const handleAddClick = () => {
-    console.log('Add button clicked');
-  };
-
-  const handleSettingsClick = () => {
-    console.log('Settings button clicked');
-  };
-
-  const handleVoiceClick = () => {
-    console.log('Voice button clicked');
-  };
-
-  const sendButtonClass = message.trim() && !isLoading && !disabled ? 'active' : 'inactive';
+  const hasValue = inputValue.trim().length > 0;
+  const sendButtonVariant = hasValue && !disabled ? 'primary' : 'secondary';
+  const sendButtonDisabled = !hasValue || disabled;
 
   return (
-    <div className="findem-ai-input-area">
-      <form onSubmit={handleSubmit} className="findem-ai-input-card">
-        <div className="findem-ai-input-content">
-          <div className="findem-input-row">
-            <input
-              ref={inputRef}
-              type="text"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              onKeyPress={handleKeyPress}
-              placeholder={placeholder}
-              className="findem-ai-input-field"
-              disabled={isLoading || disabled}
-              {...props}
+    <div className="findem-ai-chat-input">
+      <form onSubmit={handleSubmit} className="findem-ai-chat-form">
+        <div className="findem-ai-input-row">
+          {focused && (
+            <div className="findem-ai-input-cursor" />
+          )}
+          <input
+            type="text"
+            value={inputValue}
+            onChange={handleInputChange}
+            onKeyPress={handleKeyPress}
+            onFocus={() => setFocused(true)}
+            onBlur={() => setFocused(false)}
+            placeholder={placeholder}
+            className="findem-ai-input-field"
+            disabled={disabled}
+            {...props}
+          />
+        </div>
+        
+        <div className="findem-ai-actions-row">
+          <div className="findem-ai-left-actions">
+            <Button
+              variant="secondary"
+              size="small"
+              iconStart="add"
+              disabled={disabled}
+              type="button"
+            />
+            <Button
+              variant="secondary"
+              size="small"
+              iconStart="lightbulb"
+              label="Show Thinking"
+              disabled={disabled}
+              type="button"
+              onClick={onToggleThinking}
+            />
+            <Button
+              variant="secondary"
+              size="small"
+              iconStart="tune"
+              disabled={disabled}
+              type="button"
             />
           </div>
-
-          <div className="findem-action-row">
-            {showLeftActions && (
-              <div className="findem-left-actions">
-                <button 
-                  type="button" 
-                  className="findem-icon-button" 
-                  aria-label="Add"
-                  onClick={handleAddClick}
-                  disabled={disabled}
-                >
-                  <span className="material-icons">add</span>
-                </button>
-                <button 
-                  type="button" 
-                  className="findem-icon-button" 
-                  aria-label="Settings"
-                  onClick={handleSettingsClick}
-                  disabled={disabled}
-                >
-                  <span className="material-icons">tune</span>
-                </button>
-              </div>
-            )}
-
-            <div className="findem-right-actions">
-              {showVoiceButton && (
-                <button 
-                  type="button" 
-                  className="findem-icon-button" 
-                  aria-label="Voice input"
-                  onClick={handleVoiceClick}
-                  disabled={disabled}
-                >
-                  <span className="material-icons">mic</span>
-                </button>
-              )}
-              <button 
-                type="submit" 
-                className={`findem-send-button ${sendButtonClass}`}
-                disabled={!message.trim() || isLoading || disabled}
-                aria-label="Send message"
-              >
-                <span className="material-icons">arrow_upward</span>
-              </button>
-            </div>
+          
+          <div className="findem-ai-right-actions">
+            <Button
+              variant="secondary"
+              size="small"
+              iconStart="mic"
+              disabled={disabled}
+              type="button"
+            />
+            <Button
+              variant={sendButtonVariant}
+              size="small"
+              iconStart="arrow_upward"
+              disabled={sendButtonDisabled}
+              type="submit"
+            />
           </div>
         </div>
       </form>
@@ -116,10 +110,9 @@ const AIChatInput = ({
 AIChatInput.propTypes = {
   placeholder: PropTypes.string,
   onSubmit: PropTypes.func,
-  isLoading: PropTypes.bool,
+  showThinking: PropTypes.bool,
+  onToggleThinking: PropTypes.func,
   disabled: PropTypes.bool,
-  showLeftActions: PropTypes.bool,
-  showVoiceButton: PropTypes.bool,
 };
 
 export default AIChatInput;

@@ -5,60 +5,65 @@ export default {
   component: AIChatInput,
   parameters: {
     layout: 'centered',
+    docs: {
+      description: {
+        component: 'AI Chat Input component with integrated action buttons and form submission handling.'
+      }
+    }
   },
   tags: ['autodocs'],
   argTypes: {
-    placeholder: { control: 'text' },
-    isLoading: { control: 'boolean' },
-    disabled: { control: 'boolean' },
-    showLeftActions: { control: 'boolean' },
-    showVoiceButton: { control: 'boolean' },
-    onSubmit: { action: 'submitted' },
+    placeholder: { 
+      control: 'text',
+      description: 'Placeholder text for the input field'
+    },
+    showThinking: { 
+      control: 'boolean',
+      description: 'Whether the Show Thinking button is active'
+    },
+    disabled: { 
+      control: 'boolean',
+      description: 'Disable the entire input component'
+    },
+    onSubmit: { 
+      action: 'submitted',
+      description: 'Callback fired when the form is submitted'
+    },
+    onToggleThinking: { 
+      action: 'thinking-toggled',
+      description: 'Callback fired when Show Thinking button is clicked'
+    },
   },
 };
 
 export const Default = {
   args: {
     placeholder: 'Describe who you are looking for',
-    onSubmit: (message) => console.log('Submitted:', message),
+    showThinking: false,
+    disabled: false,
   },
 };
 
-export const Loading = {
+export const WithThinking = {
   args: {
     placeholder: 'Describe who you are looking for',
-    isLoading: true,
-    onSubmit: (message) => console.log('Submitted:', message),
+    showThinking: true,
+    disabled: false,
   },
 };
 
 export const Disabled = {
   args: {
     placeholder: 'Input is disabled',
+    showThinking: false,
     disabled: true,
-    onSubmit: (message) => console.log('Submitted:', message),
-  },
-};
-
-export const MinimalActions = {
-  args: {
-    placeholder: 'Minimal version with no left actions',
-    showLeftActions: false,
-    onSubmit: (message) => console.log('Submitted:', message),
-  },
-};
-
-export const NoVoiceButton = {
-  args: {
-    placeholder: 'Version without voice button',
-    showVoiceButton: false,
-    onSubmit: (message) => console.log('Submitted:', message),
   },
 };
 
 export const CustomPlaceholder = {
   args: {
     placeholder: 'Ask me anything about your search...',
-    onSubmit: (message) => console.log('Submitted:', message),
+    showThinking: false,
+    disabled: false,
   },
 };

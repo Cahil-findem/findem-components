@@ -1,0 +1,1 @@
+- When creating new components, always audit existing styles and components first. Reuse or extend these existing patterns wherever possible to ensure consistency, maintainability, and alignment with the current design system.
