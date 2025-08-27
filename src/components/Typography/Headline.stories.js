@@ -6,26 +6,17 @@ export default {
   component: Headline,
   parameters: {
     layout: 'padded',
-    docs: {
-      description: {
-        component: 'Headline component with various typography scales from the Findem design system.'
-      }
-    }
   },
   tags: ['autodocs'],
   argTypes: {
     variant: {
       control: { type: 'select' },
-      description: 'Typography variant'
+      options: ['xl', 'large-medium', 'large', 'default', 'special-medium', 'special'],
     },
     as: {
       control: { type: 'select' },
-      description: 'HTML element to render'
+      options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'span'],
     },
-    children: {
-      control: 'text',
-      description: 'Content to display'
-    }
   },
 };
 
@@ -75,24 +66,4 @@ export const Special = {
     as: 'h4',
     children: 'Special Headline',
   },
-};
-
-export const AllVariants = {
-  render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-      <Headline variant="xl" as="h1">Extra Large Headline (36px)</Headline>
-      <Headline variant="large-medium" as="h2">Large Medium Headline (24px, 600)</Headline>
-      <Headline variant="large" as="h2">Large Headline (24px, 400)</Headline>
-      <Headline variant="default" as="h3">Default Headline (18px, 500)</Headline>
-      <Headline variant="special-medium" as="h4">Special Medium Headline</Headline>
-      <Headline variant="special" as="h4">Special Headline</Headline>
-    </div>
-  ),
-  parameters: {
-    docs: {
-      description: {
-        story: 'All available headline variants displayed together for comparison.'
-      }
-    }
-  }
 };

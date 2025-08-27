@@ -1,0 +1,25 @@
+.typography-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.typography-showcase-small {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.typography-hierarchy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 600px;
+}
+
+.data-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 8px;
+}
