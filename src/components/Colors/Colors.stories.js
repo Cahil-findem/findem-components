@@ -3,6 +3,7 @@ import { ColorSwatch, ColorPalette } from './';
 
 export default {
   title: 'Findem Components/Colors',
+  component: ColorSwatch,
   parameters: {
     layout: 'padded'
   },
@@ -31,20 +32,24 @@ export const SingleSwatch = {
   }
 };
 
+function AnnotationColorsRender() {
+  return React.createElement(ColorPalette, {
+    title: 'Annotation Colors',
+    colors: annotationColors
+  });
+}
+
+function TextColorsRender() {
+  return React.createElement(ColorPalette, {
+    title: 'Text Colors',
+    colors: textColors
+  });
+}
+
 export const AnnotationColors = {
-  render: function() {
-    return React.createElement(ColorPalette, {
-      title: 'Annotation Colors',
-      colors: annotationColors
-    });
-  }
+  render: AnnotationColorsRender
 };
 
 export const TextColors = {
-  render: function() {
-    return React.createElement(ColorPalette, {
-      title: 'Text Colors',
-      colors: textColors
-    });
-  }
+  render: TextColorsRender
 };
