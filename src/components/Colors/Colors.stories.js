@@ -24,29 +24,27 @@ const textColors = [
 ];
 
 export const SingleSwatch = {
-  render: () => (
-    <ColorSwatch 
-      color="#ff46aa"
-      name="Primary"
-      value="#ff46aa"
-    />
-  )
+  args: {
+    color: '#ff46aa',
+    name: 'Primary',
+    value: '#ff46aa'
+  }
 };
 
 export const AnnotationColors = {
-  render: () => (
-    <ColorPalette
-      title="Annotation Colors"
-      colors={annotationColors}
-    />
-  )
+  render: function() {
+    return React.createElement(ColorPalette, {
+      title: 'Annotation Colors',
+      colors: annotationColors
+    });
+  }
 };
 
 export const TextColors = {
-  render: () => (
-    <ColorPalette
-      title="Text Colors"  
-      colors={textColors}
-    />
-  )
+  render: function() {
+    return React.createElement(ColorPalette, {
+      title: 'Text Colors',
+      colors: textColors
+    });
+  }
 };
