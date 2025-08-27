@@ -1,0 +1,142 @@
+/* AI Chat Input Component */
+.findem-ai-input-area {
+  padding: 16px 0 20px;
+  background-color: white;
+  width: 100%;
+  max-width: 680px;
+}
+
+.findem-ai-input-card {
+  width: 100%;
+  max-width: 680px;
+  border-radius: 16px;
+  border: 1px solid var(--findem-color-border-secondary);
+  background-color: white;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.findem-ai-input-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px 12px 12px 12px;
+}
+
+.findem-input-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  position: relative;
+}
+
+.findem-ai-input-field {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--findem-font-family-roboto);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--findem-color-text-title);
+  line-height: 24px;
+  padding: 0;
+}
+
+.findem-ai-input-field::placeholder {
+  color: var(--findem-color-text-muted);
+}
+
+.findem-action-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.findem-left-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.findem-right-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  flex: 1;
+}
+
+.findem-icon-button {
+  height: 32px;
+  width: 32px;
+  border-radius: 36px;
+  border: 1px solid var(--findem-color-border-secondary);
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.findem-icon-button:hover:not(:disabled) {
+  background-color: var(--findem-color-bg-hover);
+  border-color: var(--findem-color-text-muted);
+}
+
+.findem-icon-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.findem-icon-button .material-icons {
+  font-size: 16px;
+  color: var(--findem-color-text-tertiary);
+}
+
+.findem-send-button {
+  height: 32px;
+  width: 32px;
+  border-radius: 36px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.findem-send-button.inactive {
+  background-color: var(--findem-color-primary-light);
+  cursor: not-allowed;
+}
+
+.findem-send-button.inactive .material-icons {
+  color: white;
+  font-size: 16px;
+}
+
+.findem-send-button.active {
+  background-color: var(--findem-color-primary);
+}
+
+.findem-send-button.active .material-icons {
+  color: white;
+  font-size: 16px;
+}
+
+.findem-send-button.active:hover {
+  background-color: var(--findem-color-primary-medium);
+}
+
+.findem-send-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

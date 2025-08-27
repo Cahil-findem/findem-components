@@ -30,16 +30,12 @@ export const colors = {
     secondary: '#eaecf0'
   },
 
-  // State Colors
-  active: {
-    darker: '#167ff9',
-    lighter: '#92d8a5',
-    lightest: '#e1efff'
-  },
 
   success: {
-    darker: '#54b06d',
-    lightest: '#e0ffe9'
+    primary: '#6BCA85',
+    dark: '#207C39',
+    medium: '#92D8A5',
+    light: '#E0FFE9'
   },
 
   error: {
@@ -86,11 +82,10 @@ export const cssVariables = {
   '--findem-color-border-secondary': colors.border.secondary,
 
   // State Colors
-  '--findem-color-active-darker': colors.active.darker,
-  '--findem-color-active-lighter': colors.active.lighter,
-  '--findem-color-active-lightest': colors.active.lightest,
-  '--findem-color-success-darker': colors.success.darker,
-  '--findem-color-success-lightest': colors.success.lightest,
+  '--findem-color-success-primary': colors.success.primary,
+  '--findem-color-success-dark': colors.success.dark,
+  '--findem-color-success-medium': colors.success.medium,
+  '--findem-color-success-light': colors.success.light,
   '--findem-color-error-darker': colors.error.darker,
   '--findem-color-error-lighter': colors.error.lighter,
   '--findem-color-error-lightest': colors.error.lightest,

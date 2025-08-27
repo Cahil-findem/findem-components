@@ -21,14 +21,12 @@
   --findem-color-bg-secondary: #f9fafb;
   --findem-color-bg-new: #fcfcfd;
 
-  /* Active States */
-  --findem-color-active-darker: #167ff9;
-  --findem-color-active-lighter: #92d8a5;
-  --findem-color-active-lightest: #e1efff;
 
   /* Success States */
-  --findem-color-success-darker: #54b06d;
-  --findem-color-success-lightest: #e0ffe9;
+  --findem-color-success-primary: #6BCA85;
+  --findem-color-success-dark: #207C39;
+  --findem-color-success-medium: #92D8A5;
+  --findem-color-success-light: #E0FFE9;
 
   /* Error States */
   --findem-color-error-darker: #f17c4b;
@@ -70,14 +68,13 @@
 .findem-bg-primary-medium { background-color: var(--findem-color-primary-medium); }
 .findem-bg-primary-light { background-color: var(--findem-color-primary-light); }
 
-.findem-text-success { color: var(--findem-color-success-darker); }
+.findem-text-success { color: var(--findem-color-success-primary); }
 .findem-text-error { color: var(--findem-color-error-darker); }
 .findem-text-warning { color: var(--findem-color-warning-darker); }
 .findem-text-special { color: var(--findem-color-special-darker); }
 
-.findem-bg-success-light { background-color: var(--findem-color-success-lightest); }
+.findem-bg-success-light { background-color: var(--findem-color-success-light); }
 .findem-bg-error-light { background-color: var(--findem-color-error-lightest); }
 .findem-bg-warning-light { background-color: var(--findem-color-warning-lightest); }
 .findem-bg-special-light { background-color: var(--findem-color-special-lightest); }
 
-.findem-bg-active-light { background-color: var(--findem-color-active-lightest); }

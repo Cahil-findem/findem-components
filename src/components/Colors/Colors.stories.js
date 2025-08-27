@@ -32,37 +32,37 @@ const backgroundColors = [
 ];
 
 const borderColors = [
-  { name: 'Default Border', color: '#dcdfe', value: '#dcdfe' },
+  { name: 'Default Border', color: '#dcdfe4', value: '#dcdfe4' },
   { name: 'Secondary Border', color: '#eaecf0', value: '#eaecf0' }
 ];
 
-const activeColors = [
-  { name: 'Active Darker', color: '#167ff9', value: '#167ff9' },
-  { name: 'Active Lighter', color: '#92d8a5', value: '#92d8a5' },
-  { name: 'Active Lightest', color: '#e1efff', value: '#e1efff' }
+
+const purpleColors = [
+  { name: 'Primary Purple', color: '#735BF3', value: '#735BF3' },
+  { name: 'Dark Purple', color: '#5B3FF0', value: '#5B3FF0' },
+  { name: 'Medium Purple', color: '#E5DFFF', value: '#E5DFFF' },
+  { name: 'Light Purple', color: '#F6F4FF', value: '#F6F4FF' }
 ];
 
-const successColors = [
-  { name: 'Success Darker', color: '#54b06d', value: '#54b06d' },
-  { name: 'Success Lightest', color: '#e0ffe9', value: '#e0ffe9' }
+const greenColors = [
+  { name: 'Primary Green', color: '#6BCA85', value: '#6BCA85' },
+  { name: 'Dark Green', color: '#207C39', value: '#207C39' },
+  { name: 'Medium Green', color: '#92D8A5', value: '#92D8A5' },
+  { name: 'Light Green', color: '#E0FFE9', value: '#E0FFE9' }
 ];
 
-const errorColors = [
-  { name: 'Error Darker', color: '#f17c4b', value: '#f17c4b' },
-  { name: 'Error Lighter', color: '#ffbfa3', value: '#ffbfa3' },
-  { name: 'Error Lightest', color: '#ffede5', value: '#ffede5' }
+const orangeColors = [
+  { name: 'Primary Orange', color: '#F79009', value: '#F79009' },
+  { name: 'Dark Orange', color: '#B54708', value: '#B54708' },
+  { name: 'Medium Orange', color: '#FEC84B', value: '#FEC84B' },
+  { name: 'Light Orange', color: '#FFFAE5', value: '#FFFAE5' }
 ];
 
-const warningColors = [
-  { name: 'Warning Darker', color: '#856a00', value: '#856a00' },
-  { name: 'Warning Lighter', color: '#ffe066', value: '#ffe066' },
-  { name: 'Warning Lightest', color: '#fffae5', value: '#fffae5' }
-];
-
-const specialColors = [
-  { name: 'Special Darker', color: '#9370bd', value: '#9370bd' },
-  { name: 'Special Lighter', color: '#c9b3e5', value: '#c9b3e5' },
-  { name: 'Special Lightest', color: '#f1e5ff', value: '#f1e5ff' }
+const redColors = [
+  { name: 'Primary Red', color: '#F04438', value: '#F04438' },
+  { name: 'Dark Red', color: '#B42318', value: '#B42318' },
+  { name: 'Medium Red', color: '#FDA29B', value: '#FDA29B' },
+  { name: 'Light Red', color: '#FEF3F2', value: '#FEF3F2' }
 ];
 
 export const SingleSwatch = {
@@ -101,38 +101,31 @@ function BorderColorsRender() {
   });
 }
 
-function ActiveColorsRender() {
+function PurpleColorsRender() {
   return React.createElement(ColorPalette, {
-    title: 'Active State Colors',
-    colors: activeColors
+    title: 'Purple (AI/Special) Colors',
+    colors: purpleColors
   });
 }
 
-function SuccessColorsRender() {
+function GreenColorsRender() {
   return React.createElement(ColorPalette, {
-    title: 'Success State Colors',
-    colors: successColors
+    title: 'Green (Success) Colors',
+    colors: greenColors
   });
 }
 
-function ErrorColorsRender() {
+function OrangeColorsRender() {
   return React.createElement(ColorPalette, {
-    title: 'Error State Colors',
-    colors: errorColors
+    title: 'Orange (Warning) Colors',
+    colors: orangeColors
   });
 }
 
-function WarningColorsRender() {
+function RedColorsRender() {
   return React.createElement(ColorPalette, {
-    title: 'Warning State Colors',
-    colors: warningColors
-  });
-}
-
-function SpecialColorsRender() {
-  return React.createElement(ColorPalette, {
-    title: 'Special State Colors',
-    colors: specialColors
+    title: 'Red (Error) Colors',
+    colors: redColors
   });
 }
 
@@ -155,24 +148,20 @@ function AllColorsRender() {
       colors: borderColors
     }),
     React.createElement(ColorPalette, {
-      title: 'Active State Colors',
-      colors: activeColors
+      title: 'Purple (AI/Special) Colors',
+      colors: purpleColors
     }),
     React.createElement(ColorPalette, {
-      title: 'Success State Colors',
-      colors: successColors
+      title: 'Green (Success) Colors',
+      colors: greenColors
     }),
     React.createElement(ColorPalette, {
-      title: 'Error State Colors',
-      colors: errorColors
+      title: 'Orange (Warning) Colors',
+      colors: orangeColors
     }),
     React.createElement(ColorPalette, {
-      title: 'Warning State Colors',
-      colors: warningColors
-    }),
-    React.createElement(ColorPalette, {
-      title: 'Special State Colors',
-      colors: specialColors
+      title: 'Red (Error) Colors',
+      colors: redColors
     })
   );
 }
@@ -193,24 +182,20 @@ export const BorderColors = {
   render: BorderColorsRender
 };
 
-export const ActiveColors = {
-  render: ActiveColorsRender
+export const PurpleColors = {
+  render: PurpleColorsRender
 };
 
-export const SuccessColors = {
-  render: SuccessColorsRender
+export const GreenColors = {
+  render: GreenColorsRender
 };
 
-export const ErrorColors = {
-  render: ErrorColorsRender
+export const OrangeColors = {
+  render: OrangeColorsRender
 };
 
-export const WarningColors = {
-  render: WarningColorsRender
-};
-
-export const SpecialColors = {
-  render: SpecialColorsRender
+export const RedColors = {
+  render: RedColorsRender
 };
 
 export const AllColors = {

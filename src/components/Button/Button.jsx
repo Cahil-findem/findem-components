@@ -3,30 +3,41 @@ import PropTypes from 'prop-types';
 import './Button.css';
 
 const Button = ({ 
-  primary = false, 
+  variant = 'primary',
   size = 'medium', 
-  backgroundColor, 
-  label, 
+  state = 'idle',
+  label = 'Button',
+  iconStart,
+  iconEnd,
   ...props 
 }) => {
-  const mode = primary ? 'findem-button--primary' : 'findem-button--secondary';
+  const classes = [
+    'findem-button',
+    `findem-button--${variant}`,
+    `findem-button--${size}`,
+    `findem-button--${state}`
+  ].join(' ');
+
   return (
     <button
       type="button"
-      className={['findem-button', `findem-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
+      className={classes}
       {...props}
     >
-      {label}
+      {iconStart && <span className="findem-button__icon findem-button__icon--start">{iconStart}</span>}
+      <span className="findem-button__label">{label}</span>
+      {iconEnd && <span className="findem-button__icon findem-button__icon--end">{iconEnd}</span>}
     </button>
   );
 };
 
 Button.propTypes = {
-  primary: PropTypes.bool,
-  backgroundColor: PropTypes.string,
+  variant: PropTypes.oneOf(['primary', 'secondary', 'ghost']),
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  label: PropTypes.string.isRequired,
+  state: PropTypes.oneOf(['idle', 'hover', 'active', 'disabled']),
+  label: PropTypes.string,
+  iconStart: PropTypes.string,
+  iconEnd: PropTypes.string,
   onClick: PropTypes.func,
 };
 
