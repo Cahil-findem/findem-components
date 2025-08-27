@@ -1,0 +1,78 @@
+:root {
+  /* Annotation Colors */
+  --findem-color-annotation-primary: #ff46aa;
+  --findem-color-annotation-dark: #8f0c47;
+  --findem-color-annotation-medium: #f0127f;
+  --findem-color-annotation-light: #ffcaeb;
+
+  /* Layout Colors - Text */
+  --findem-color-text-title: #101828;
+  --findem-color-text-secondary-title: #465366;
+  --findem-color-text-tertiary: #667085;
+  --findem-color-text-muted: #969dad;
+
+  /* Layout Colors - Borders */
+  --findem-color-border-default: #dcdfe;
+  --findem-color-border-secondary: #eaecf0;
+
+  /* Layout Colors - Backgrounds */
+  --findem-color-bg-hover: #f2f4f7;
+  --findem-color-bg-table-header: #f3f5f8;
+  --findem-color-bg-secondary: #f9fafb;
+  --findem-color-bg-new: #fcfcfd;
+
+  /* Active States */
+  --findem-color-active-darker: #167ff9;
+  --findem-color-active-lighter: #92d8a5;
+  --findem-color-active-lightest: #e1efff;
+
+  /* Success States */
+  --findem-color-success-darker: #54b06d;
+  --findem-color-success-lightest: #e0ffe9;
+
+  /* Error States */
+  --findem-color-error-darker: #f17c4b;
+  --findem-color-error-lighter: #ffbfa3;
+  --findem-color-error-lightest: #ffede5;
+
+  /* Warning States */
+  --findem-color-warning-darker: #856a00;
+  --findem-color-warning-lighter: #ffe066;
+  --findem-color-warning-lightest: #fffae5;
+
+  /* Special States */
+  --findem-color-special-darker: #9370bd;
+  --findem-color-special-lighter: #c9b3e5;
+  --findem-color-special-lightest: #f1e5ff;
+}
+
+/* Color Utility Classes */
+.findem-text-title { color: var(--findem-color-text-title); }
+.findem-text-secondary-title { color: var(--findem-color-text-secondary-title); }
+.findem-text-tertiary { color: var(--findem-color-text-tertiary); }
+.findem-text-muted { color: var(--findem-color-text-muted); }
+
+.findem-bg-hover { background-color: var(--findem-color-bg-hover); }
+.findem-bg-secondary { background-color: var(--findem-color-bg-secondary); }
+.findem-bg-new { background-color: var(--findem-color-bg-new); }
+.findem-bg-table-header { background-color: var(--findem-color-bg-table-header); }
+
+.findem-border-default { border-color: var(--findem-color-border-default); }
+.findem-border-secondary { border-color: var(--findem-color-border-secondary); }
+
+.findem-text-annotation-primary { color: var(--findem-color-annotation-primary); }
+.findem-text-annotation-dark { color: var(--findem-color-annotation-dark); }
+.findem-text-annotation-medium { color: var(--findem-color-annotation-medium); }
+.findem-text-annotation-light { color: var(--findem-color-annotation-light); }
+
+.findem-text-success { color: var(--findem-color-success-darker); }
+.findem-text-error { color: var(--findem-color-error-darker); }
+.findem-text-warning { color: var(--findem-color-warning-darker); }
+.findem-text-special { color: var(--findem-color-special-darker); }
+
+.findem-bg-success-light { background-color: var(--findem-color-success-lightest); }
+.findem-bg-error-light { background-color: var(--findem-color-error-lightest); }
+.findem-bg-warning-light { background-color: var(--findem-color-warning-lightest); }
+.findem-bg-special-light { background-color: var(--findem-color-special-lightest); }
+
+.findem-bg-active-light { background-color: var(--findem-color-active-lightest); }

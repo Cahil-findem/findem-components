@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Roboto+Condensed:wght@400;500&display=swap');
+@import './colors.css';
 
 :root {
   /* Font Families */
@@ -99,6 +100,7 @@
   font-size: var(--findem-headline-xl-font-size);
   font-weight: var(--findem-headline-xl-font-weight);
   line-height: var(--findem-headline-xl-line-height);
+  color: var(--findem-color-text-title);
   margin: 0;
 }
 
@@ -107,6 +109,7 @@
   font-size: var(--findem-headline-large-medium-font-size);
   font-weight: var(--findem-headline-large-medium-font-weight);
   line-height: var(--findem-headline-large-medium-line-height);
+  color: var(--findem-color-text-title);
   margin: 0;
 }
 
@@ -115,6 +118,7 @@
   font-size: var(--findem-headline-large-font-size);
   font-weight: var(--findem-headline-large-font-weight);
   line-height: var(--findem-headline-large-line-height);
+  color: var(--findem-color-text-title);
   margin: 0;
 }
 
@@ -123,6 +127,7 @@
   font-size: var(--findem-headline-default-font-size);
   font-weight: var(--findem-headline-default-font-weight);
   line-height: var(--findem-headline-default-line-height);
+  color: var(--findem-color-text-secondary-title);
   margin: 0;
 }
 
@@ -149,6 +154,7 @@
   font-size: var(--findem-text-lead-medium-font-size);
   font-weight: var(--findem-text-lead-medium-font-weight);
   line-height: var(--findem-text-lead-medium-line-height);
+  color: var(--findem-color-text-title);
   margin: 0 0 var(--findem-text-lead-medium-margin-bottom) 0;
 }
 
@@ -157,6 +163,7 @@
   font-size: var(--findem-text-lead-font-size);
   font-weight: var(--findem-text-lead-font-weight);
   line-height: var(--findem-text-lead-line-height);
+  color: var(--findem-color-text-title);
   margin: 0 0 var(--findem-text-lead-margin-bottom) 0;
 }
 
@@ -165,6 +172,7 @@
   font-size: var(--findem-text-default-medium-font-size);
   font-weight: var(--findem-text-default-medium-font-weight);
   line-height: var(--findem-text-default-medium-line-height);
+  color: var(--findem-color-text-secondary-title);
   margin: 0 0 var(--findem-text-default-medium-margin-bottom) 0;
 }
 
@@ -173,6 +181,7 @@
   font-size: var(--findem-text-default-font-size);
   font-weight: var(--findem-text-default-font-weight);
   line-height: var(--findem-text-default-line-height);
+  color: var(--findem-color-text-tertiary);
   margin: 0 0 var(--findem-text-default-margin-bottom) 0;
 }
 
@@ -181,6 +190,7 @@
   font-size: var(--findem-text-data-medium-font-size);
   font-weight: var(--findem-text-data-medium-font-weight);
   line-height: var(--findem-text-data-medium-line-height);
+  color: var(--findem-color-text-tertiary);
   margin: 0 0 var(--findem-text-data-medium-margin-bottom) 0;
 }
 
@@ -189,6 +199,7 @@
   font-size: var(--findem-text-data-font-size);
   font-weight: var(--findem-text-data-font-weight);
   line-height: var(--findem-text-data-line-height);
+  color: var(--findem-color-text-tertiary);
   margin: 0;
 }
 
@@ -197,6 +208,7 @@
   font-size: var(--findem-text-detail-medium-font-size);
   font-weight: var(--findem-text-detail-medium-font-weight);
   line-height: var(--findem-text-detail-medium-line-height);
+  color: var(--findem-color-text-muted);
   margin: 0 0 var(--findem-text-detail-medium-margin-bottom) 0;
 }
 
@@ -205,6 +217,7 @@
   font-size: var(--findem-text-detail-font-size);
   font-weight: var(--findem-text-detail-font-weight);
   line-height: var(--findem-text-detail-line-height);
+  color: var(--findem-color-text-muted);
   margin: 0 0 var(--findem-text-detail-margin-bottom) 0;
 }
 
@@ -213,6 +226,7 @@
   font-size: var(--findem-text-label-font-size);
   font-weight: var(--findem-text-label-font-weight);
   line-height: var(--findem-text-label-line-height);
+  color: var(--findem-color-text-muted);
   text-transform: var(--findem-text-label-text-transform);
   margin: 0;
 }
