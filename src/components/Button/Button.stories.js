@@ -1,4 +1,3 @@
-import { fn } from '@storybook/test';
 import Button from './Button';
 
 export default {
@@ -10,8 +9,8 @@ export default {
   tags: ['autodocs'],
   argTypes: {
     backgroundColor: { control: 'color' },
+    onClick: { action: 'clicked' },
   },
-  args: { onClick: fn() },
 };
 
 export const Primary = {

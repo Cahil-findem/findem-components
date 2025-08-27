@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Roboto+Condensed:wght@400;500&display=swap');
+
+:root {
+  /* Font Families */
+  --findem-font-family-roboto: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --findem-font-family-roboto-condensed: 'Roboto Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Headline Typography */
+  --findem-headline-xl-font-size: 36px;
+  --findem-headline-xl-font-weight: 400;
+  --findem-headline-xl-line-height: 52px;
+  --findem-headline-xl-font-family: var(--findem-font-family-roboto);
+  
+  --findem-headline-large-medium-font-size: 24px;
+  --findem-headline-large-medium-font-weight: 600;
+  --findem-headline-large-medium-line-height: 32px;
+  --findem-headline-large-medium-font-family: var(--findem-font-family-roboto);
+  
+  --findem-headline-large-font-size: 24px;
+  --findem-headline-large-font-weight: 400;
+  --findem-headline-large-line-height: 32px;
+  --findem-headline-large-font-family: var(--findem-font-family-roboto);
+  
+  --findem-headline-default-font-size: 18px;
+  --findem-headline-default-font-weight: 500;
+  --findem-headline-default-line-height: 24px;
+  --findem-headline-default-font-family: var(--findem-font-family-roboto);
+  
+  --findem-headline-special-medium-font-size: 14px;
+  --findem-headline-special-medium-font-weight: 500;
+  --findem-headline-special-medium-line-height: 19.6px;
+  --findem-headline-special-medium-font-family: var(--findem-font-family-roboto-condensed);
+  --findem-headline-special-medium-text-transform: uppercase;
+  
+  --findem-headline-special-font-size: 14px;
+  --findem-headline-special-font-weight: 400;
+  --findem-headline-special-line-height: 19.6px;
+  --findem-headline-special-font-family: var(--findem-font-family-roboto-condensed);
+  --findem-headline-special-text-transform: uppercase;
+
+  /* Text Typography */
+  --findem-text-lead-medium-font-size: 16px;
+  --findem-text-lead-medium-font-weight: 500;
+  --findem-text-lead-medium-line-height: 22px;
+  --findem-text-lead-medium-font-family: var(--findem-font-family-roboto);
+  --findem-text-lead-medium-margin-bottom: 8px;
+  
+  --findem-text-lead-font-size: 16px;
+  --findem-text-lead-font-weight: 400;
+  --findem-text-lead-line-height: 22px;
+  --findem-text-lead-font-family: var(--findem-font-family-roboto);
+  --findem-text-lead-margin-bottom: 8px;
+  
+  --findem-text-default-medium-font-size: 14px;
+  --findem-text-default-medium-font-weight: 500;
+  --findem-text-default-medium-line-height: 20px;
+  --findem-text-default-medium-font-family: var(--findem-font-family-roboto);
+  --findem-text-default-medium-margin-bottom: 7px;
+  
+  --findem-text-default-font-size: 14px;
+  --findem-text-default-font-weight: 400;
+  --findem-text-default-line-height: 20px;
+  --findem-text-default-font-family: var(--findem-font-family-roboto);
+  --findem-text-default-margin-bottom: 7px;
+  
+  --findem-text-data-medium-font-size: 13px;
+  --findem-text-data-medium-font-weight: 500;
+  --findem-text-data-medium-line-height: 18px;
+  --findem-text-data-medium-font-family: var(--findem-font-family-roboto);
+  --findem-text-data-medium-margin-bottom: 7px;
+  
+  --findem-text-data-font-size: 13px;
+  --findem-text-data-font-weight: 400;
+  --findem-text-data-line-height: 18px;
+  --findem-text-data-font-family: var(--findem-font-family-roboto);
+  
+  --findem-text-detail-medium-font-size: 12px;
+  --findem-text-detail-medium-font-weight: 500;
+  --findem-text-detail-medium-line-height: 14.4px;
+  --findem-text-detail-medium-font-family: var(--findem-font-family-roboto);
+  --findem-text-detail-medium-margin-bottom: 6px;
+  
+  --findem-text-detail-font-size: 12px;
+  --findem-text-detail-font-weight: 400;
+  --findem-text-detail-line-height: 14.4px;
+  --findem-text-detail-font-family: var(--findem-font-family-roboto);
+  --findem-text-detail-margin-bottom: 6px;
+  
+  --findem-text-label-font-size: 13px;
+  --findem-text-label-font-weight: 400;
+  --findem-text-label-line-height: 19.6px;
+  --findem-text-label-font-family: var(--findem-font-family-roboto-condensed);
+  --findem-text-label-text-transform: uppercase;
+}
+
+/* Typography Classes */
+.findem-headline-xl {
+  font-family: var(--findem-headline-xl-font-family);
+  font-size: var(--findem-headline-xl-font-size);
+  font-weight: var(--findem-headline-xl-font-weight);
+  line-height: var(--findem-headline-xl-line-height);
+  margin: 0;
+}
+
+.findem-headline-large-medium {
+  font-family: var(--findem-headline-large-medium-font-family);
+  font-size: var(--findem-headline-large-medium-font-size);
+  font-weight: var(--findem-headline-large-medium-font-weight);
+  line-height: var(--findem-headline-large-medium-line-height);
+  margin: 0;
+}
+
+.findem-headline-large {
+  font-family: var(--findem-headline-large-font-family);
+  font-size: var(--findem-headline-large-font-size);
+  font-weight: var(--findem-headline-large-font-weight);
+  line-height: var(--findem-headline-large-line-height);
+  margin: 0;
+}
+
+.findem-headline-default {
+  font-family: var(--findem-headline-default-font-family);
+  font-size: var(--findem-headline-default-font-size);
+  font-weight: var(--findem-headline-default-font-weight);
+  line-height: var(--findem-headline-default-line-height);
+  margin: 0;
+}
+
+.findem-headline-special-medium {
+  font-family: var(--findem-headline-special-medium-font-family);
+  font-size: var(--findem-headline-special-medium-font-size);
+  font-weight: var(--findem-headline-special-medium-font-weight);
+  line-height: var(--findem-headline-special-medium-line-height);
+  text-transform: var(--findem-headline-special-medium-text-transform);
+  margin: 0;
+}
+
+.findem-headline-special {
+  font-family: var(--findem-headline-special-font-family);
+  font-size: var(--findem-headline-special-font-size);
+  font-weight: var(--findem-headline-special-font-weight);
+  line-height: var(--findem-headline-special-line-height);
+  text-transform: var(--findem-headline-special-text-transform);
+  margin: 0;
+}
+
+.findem-text-lead-medium {
+  font-family: var(--findem-text-lead-medium-font-family);
+  font-size: var(--findem-text-lead-medium-font-size);
+  font-weight: var(--findem-text-lead-medium-font-weight);
+  line-height: var(--findem-text-lead-medium-line-height);
+  margin: 0 0 var(--findem-text-lead-medium-margin-bottom) 0;
+}
+
+.findem-text-lead {
+  font-family: var(--findem-text-lead-font-family);
+  font-size: var(--findem-text-lead-font-size);
+  font-weight: var(--findem-text-lead-font-weight);
+  line-height: var(--findem-text-lead-line-height);
+  margin: 0 0 var(--findem-text-lead-margin-bottom) 0;
+}
+
+.findem-text-default-medium {
+  font-family: var(--findem-text-default-medium-font-family);
+  font-size: var(--findem-text-default-medium-font-size);
+  font-weight: var(--findem-text-default-medium-font-weight);
+  line-height: var(--findem-text-default-medium-line-height);
+  margin: 0 0 var(--findem-text-default-medium-margin-bottom) 0;
+}
+
+.findem-text-default {
+  font-family: var(--findem-text-default-font-family);
+  font-size: var(--findem-text-default-font-size);
+  font-weight: var(--findem-text-default-font-weight);
+  line-height: var(--findem-text-default-line-height);
+  margin: 0 0 var(--findem-text-default-margin-bottom) 0;
+}
+
+.findem-text-data-medium {
+  font-family: var(--findem-text-data-medium-font-family);
+  font-size: var(--findem-text-data-medium-font-size);
+  font-weight: var(--findem-text-data-medium-font-weight);
+  line-height: var(--findem-text-data-medium-line-height);
+  margin: 0 0 var(--findem-text-data-medium-margin-bottom) 0;
+}
+
+.findem-text-data {
+  font-family: var(--findem-text-data-font-family);
+  font-size: var(--findem-text-data-font-size);
+  font-weight: var(--findem-text-data-font-weight);
+  line-height: var(--findem-text-data-line-height);
+  margin: 0;
+}
+
+.findem-text-detail-medium {
+  font-family: var(--findem-text-detail-medium-font-family);
+  font-size: var(--findem-text-detail-medium-font-size);
+  font-weight: var(--findem-text-detail-medium-font-weight);
+  line-height: var(--findem-text-detail-medium-line-height);
+  margin: 0 0 var(--findem-text-detail-medium-margin-bottom) 0;
+}
+
+.findem-text-detail {
+  font-family: var(--findem-text-detail-font-family);
+  font-size: var(--findem-text-detail-font-size);
+  font-weight: var(--findem-text-detail-font-weight);
+  line-height: var(--findem-text-detail-line-height);
+  margin: 0 0 var(--findem-text-detail-margin-bottom) 0;
+}
+
+.findem-text-label {
+  font-family: var(--findem-text-label-font-family);
+  font-size: var(--findem-text-label-font-size);
+  font-weight: var(--findem-text-label-font-weight);
+  line-height: var(--findem-text-label-line-height);
+  text-transform: var(--findem-text-label-text-transform);
+  margin: 0;
+}
