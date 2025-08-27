@@ -1,11 +1,11 @@
 // Findem Color Tokens
 export const colors = {
-  // Annotation Colors
-  annotation: {
-    primary: '#ff46aa',
-    dark: '#8f0c47',
-    medium: '#f0127f',
-    light: '#ffcaeb'
+  // Primary Colors
+  primary: {
+    main: '#4599FA',
+    dark: '#0F42BC',
+    medium: '#167FF9',
+    light: '#E1EFFF'
   },
 
   // Text Colors
@@ -63,11 +63,11 @@ export const colors = {
 
 // CSS Custom Properties mapping
 export const cssVariables = {
-  // Annotation Colors
-  '--findem-color-annotation-primary': colors.annotation.primary,
-  '--findem-color-annotation-dark': colors.annotation.dark,
-  '--findem-color-annotation-medium': colors.annotation.medium,
-  '--findem-color-annotation-light': colors.annotation.light,
+  // Primary Colors
+  '--findem-color-primary': colors.primary.main,
+  '--findem-color-primary-dark': colors.primary.dark,
+  '--findem-color-primary-medium': colors.primary.medium,
+  '--findem-color-primary-light': colors.primary.light,
 
   // Text Colors
   '--findem-color-text-title': colors.text.title,

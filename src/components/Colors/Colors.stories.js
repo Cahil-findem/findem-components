@@ -10,11 +10,11 @@ export default {
   tags: ['autodocs']
 };
 
-const annotationColors = [
-  { name: 'Primary', color: '#ff46aa', value: '#ff46aa' },
-  { name: 'Dark', color: '#8f0c47', value: '#8f0c47' },
-  { name: 'Medium', color: '#f0127f', value: '#f0127f' },
-  { name: 'Light', color: '#ffcaeb', value: '#ffcaeb' }
+const primaryColors = [
+  { name: 'Primary Blue', color: '#4599FA', value: '#4599FA' },
+  { name: 'Dark Blue', color: '#0F42BC', value: '#0F42BC' },
+  { name: 'Medium Blue', color: '#167FF9', value: '#167FF9' },
+  { name: 'Light Blue', color: '#E1EFFF', value: '#E1EFFF' }
 ];
 
 const textColors = [
@@ -67,16 +67,16 @@ const specialColors = [
 
 export const SingleSwatch = {
   args: {
-    color: '#ff46aa',
-    name: 'Primary',
-    value: '#ff46aa'
+    color: '#4599FA',
+    name: 'Primary Blue',
+    value: '#4599FA'
   }
 };
 
-function AnnotationColorsRender() {
+function PrimaryColorsRender() {
   return React.createElement(ColorPalette, {
-    title: 'Annotation Colors',
-    colors: annotationColors
+    title: 'Primary Colors',
+    colors: primaryColors
   });
 }
 
@@ -139,8 +139,8 @@ function SpecialColorsRender() {
 function AllColorsRender() {
   return React.createElement('div', null,
     React.createElement(ColorPalette, {
-      title: 'Annotation Colors (Primary Branding)',
-      colors: annotationColors
+      title: 'Primary Colors (Branding)',
+      colors: primaryColors
     }),
     React.createElement(ColorPalette, {
       title: 'Text Colors',
@@ -177,8 +177,8 @@ function AllColorsRender() {
   );
 }
 
-export const AnnotationColors = {
-  render: AnnotationColorsRender
+export const PrimaryColors = {
+  render: PrimaryColorsRender
 };
 
 export const TextColors = {

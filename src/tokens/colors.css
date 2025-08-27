@@ -1,9 +1,9 @@
 :root {
-  /* Annotation Colors */
-  --findem-color-annotation-primary: #ff46aa;
-  --findem-color-annotation-dark: #8f0c47;
-  --findem-color-annotation-medium: #f0127f;
-  --findem-color-annotation-light: #ffcaeb;
+  /* Primary Colors */
+  --findem-color-primary: #4599FA;
+  --findem-color-primary-dark: #0F42BC;
+  --findem-color-primary-medium: #167FF9;
+  --findem-color-primary-light: #E1EFFF;
 
   /* Layout Colors - Text */
   --findem-color-text-title: #101828;
@@ -60,10 +60,15 @@
 .findem-border-default { border-color: var(--findem-color-border-default); }
 .findem-border-secondary { border-color: var(--findem-color-border-secondary); }
 
-.findem-text-annotation-primary { color: var(--findem-color-annotation-primary); }
-.findem-text-annotation-dark { color: var(--findem-color-annotation-dark); }
-.findem-text-annotation-medium { color: var(--findem-color-annotation-medium); }
-.findem-text-annotation-light { color: var(--findem-color-annotation-light); }
+.findem-text-primary { color: var(--findem-color-primary); }
+.findem-text-primary-dark { color: var(--findem-color-primary-dark); }
+.findem-text-primary-medium { color: var(--findem-color-primary-medium); }
+.findem-text-primary-light { color: var(--findem-color-primary-light); }
+
+.findem-bg-primary { background-color: var(--findem-color-primary); }
+.findem-bg-primary-dark { background-color: var(--findem-color-primary-dark); }
+.findem-bg-primary-medium { background-color: var(--findem-color-primary-medium); }
+.findem-bg-primary-light { background-color: var(--findem-color-primary-light); }
 
 .findem-text-success { color: var(--findem-color-success-darker); }
 .findem-text-error { color: var(--findem-color-error-darker); }
